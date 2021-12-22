@@ -1,14 +1,14 @@
 const addNetwork = () => {
   const params = [{
-    chainId: '0x1e',
-    chainName: 'RSK Mainnet',
+    chainId: '0x38',
+    chainName: 'Binance Smart Chain',
     nativeCurrency: {
-      name: 'RSK BTC',
-      symbol: 'RBTC',
+      name: 'Binance Coin',
+      symbol: 'BNB',
       decimals: 18
     },
-    rpcUrls: ['https://public-node.rsk.co'],
-    blockExplorerUrls: ['https://explorer.rsk.co']
+    rpcUrls: ['https://bsc-dataseed.binance.org/'],
+    blockExplorerUrls: ['https://bscscan.com']
   }]
 
   window.ethereum.request({ method: 'wallet_addEthereumChain', params })
@@ -17,5 +17,5 @@ const addNetwork = () => {
 }
 
 return (
-  <button onClick={addNetwork}>Add RSK Mainnet to Metamask</button>
+  <button onClick={addNetwork}>Connect to Binance Smart Chain</button>
 )
